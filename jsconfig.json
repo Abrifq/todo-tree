@@ -1,0 +1,9 @@
+{
+    "include": ["src/**/*","test/*"],
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "target": "es2023",
+        "module": "commonjs"
+    }
+}
