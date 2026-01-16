@@ -1204,7 +1204,7 @@
     },
     "devDependencies": {
         "@vscode/vsce": "^3.7.1",
-        "@types/vscode": "1.78.0",
+        "@types/vscode": "^1.72.0",
         "parse-code-context": "^1.0.0",
         "qunit": "^2.18.0",
         "webpack": "^5.104.1",
