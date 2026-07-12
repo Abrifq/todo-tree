@@ -95,6 +95,12 @@ function ripgrepPath()
     var rgPath = "";
 
     rgPath = exePathIsDefined( vscode.workspace.getConfiguration( 'todo-tree.ripgrep' ).ripgrep );
+    if (rgPath) return rgPath;
+
+    rgPath = exePathIsDefined(path.join(vscode.env.appRoot, "node_modules/@vscode/ripgrep-universal/bin", process.platform + "-" + process.arch, exeName()))
+    if (rgPath) return rgPath;
+
+    rgPath = exePathIsDefined(path.join(vscode.env.appRoot, "node_modules.asar.unpacked/@vscode/ripgrep-universal/bin", process.platform + "-" + process.arch, exeName()))
     if( rgPath ) return rgPath;
 
     rgPath = exePathIsDefined( path.join( vscode.env.appRoot, "node_modules/vscode-ripgrep/bin/", exeName() ) );
